@@ -24,7 +24,7 @@ function ConnexionPage() {
 
   return (
     <div className="register">
-      <div className="button">
+      <div className="buttonregister">
         <Link to="/register">
           <button type="button">Créer un compte</button>
         </Link>

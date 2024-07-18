@@ -23,7 +23,7 @@ function RegisterPage() {
 
   return (
     <div className="register">
-      <div className="button">
+      <div className="buttonregister">
         <button type="button">Créer un compte</button>
         <Link to="/connexion">
           <button type="button">Se connecter</button>
@@ -110,10 +110,9 @@ function RegisterPage() {
               <span>{errors.confirmpassword.message}</span>
             )}
           </div>
-
-          <button type="submit" className="button_connexion">
-            Connexion
-          </button>
+          <div className="button_connexion">
+            <button type="submit">Connexion</button>
+          </div>
         </form>
       </div>
     </div>
