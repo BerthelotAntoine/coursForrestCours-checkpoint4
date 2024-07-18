@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <Navbar user={currentUser} />
       <Outlet context={{ currentUser, setCurrentUser }} />
     </>
   );

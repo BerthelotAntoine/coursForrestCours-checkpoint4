@@ -24,9 +24,9 @@ function RegisterPage() {
   return (
     <div className="register">
       <div className="buttonregister">
-        <button type="button">Créer un compte</button>
-        <Link to="/connexion">
-          <button type="button">Se connecter</button>
+        <p className="creationCompte">Créer un compte</p>
+        <Link to="/connexion" className="seConnecter">
+          Se connecter
         </Link>
       </div>
       <div>
@@ -37,6 +37,7 @@ function RegisterPage() {
               id="firstname"
               name="firstname"
               placeholder="Prénom"
+              className="inputForm"
               {...register("firstname", {
                 required: "Ce champ est requis !",
                 minLength: {
@@ -51,6 +52,7 @@ function RegisterPage() {
               id="lastname"
               name="lastname"
               placeholder="Nom"
+              className="inputForm"
               {...register("lastname", {
                 required: "Ce champ est requis !",
                 minLength: {
@@ -65,6 +67,7 @@ function RegisterPage() {
               id="email"
               name="email"
               placeholder="Email"
+              className="inputForm"
               {...register("email", {
                 required: "Votre email est obligatoire!",
                 pattern: {
@@ -79,6 +82,7 @@ function RegisterPage() {
               id="password"
               name="password"
               placeholder="Mot de passe"
+              className="inputForm"
               {...register("password", {
                 required: "le mot de passe est requis!",
                 pattern: {
@@ -94,6 +98,7 @@ function RegisterPage() {
               id="confirmpassword"
               name="confirmpassword"
               placeholder="confirmez votre mot de passe"
+              className="inputForm"
               {...register("confirmpassword", {
                 required: "le mot de passe est requis!",
                 pattern: {
@@ -111,7 +116,9 @@ function RegisterPage() {
             )}
           </div>
           <div className="button_connexion">
-            <button type="submit">Connexion</button>
+            <button type="submit" className="conect">
+              Connexion
+            </button>
           </div>
         </form>
       </div>

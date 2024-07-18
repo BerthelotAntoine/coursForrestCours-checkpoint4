@@ -3,20 +3,20 @@ const { database, tables } = require("../config");
 
 // Import repository classes
 const AbstractRepository = require("../../database/models/AbstractRepository");
-const ItemRepository = require("../../database/models/ItemRepository");
+const UserRepository = require("../../database/models/UserRepository");
 
 // Test suite for ItemRepository
 describe("ItemRepository", () => {
   // Test: Check if ItemRepository extends AbstractRepository
   test("ItemRepository extends AbstractRepository", async () => {
     // Assertions
-    expect(Object.getPrototypeOf(ItemRepository)).toBe(AbstractRepository);
+    expect(Object.getPrototypeOf(UserRepository)).toBe(AbstractRepository);
   });
 
   // Test: Check if tables.item is an instance of ItemRepository
   test("tables.item = new ItemRepository", async () => {
     // Assertions
-    expect(tables.item instanceof ItemRepository).toBe(true);
+    expect(tables.item instanceof UserRepository).toBe(true);
   });
 
   // Test: Check if create method inserts data into the 'item' table

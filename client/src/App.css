@@ -88,13 +88,31 @@
   border-top: solid 1px black;
 }
 
+.conect {
+  background-color: #5e6be1;
+  color: white;
+  padding: 0.3rem 0.5rem;
+  border-radius: 12px;
+}
+
 /* FORMULAIRE */
 
 .allform {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
   margin: 0 4rem 0 4rem;
+}
+
+.inputForm {
+  display: flex;
+  justify-content: center;
+  height: 2rem;
+  width: 15rem;
+  padding: 0 1rem 0 1rem;
+  border-radius: 10px;
 }
 
 .form {
@@ -114,4 +132,104 @@
   display: flex;
   justify-content: center;
   gap: 2rem;
+  margin: 1rem 0;
+}
+
+.creationCompte {
+  text-decoration: underline;
+}
+
+.seConnecter {
+  text-decoration: none;
+}
+
+/* KILOMETRE 10 */
+
+.imgToulouse {
+  max-width: 15rem;
+  border: solid black;
+}
+
+.cityName {
+  border: solid #5e6be1;
+  display: flex;
+  justify-content: center;
+  background-color: #5e6be1;
+  color: white;
+  padding: 0.4rem 0;
+}
+
+.imgAndName {
+  margin-bottom: 2rem;
+}
+
+.cardCity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+#map {
+  width: 15rem;
+  height: 20rem;
+  border: solid 2px black;
+  border-radius: 10px;
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.imgTournefeuille {
+  display: flex;
+  justify-content: center;
+  border: solid black;
+  border-radius: 5% 5% 0% 0%;
+}
+
+.imgDes {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.imgDescription {
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+}
+
+.listTri {
+  border: solid black;
+  background-color: #5e6be1;
+  color: white;
+}
+
+.paragraphe {
+  background-color: #5e6be1;
+  color: white;
+  border: solid black;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.paragrapheDesign {
+  padding: 3rem;
+}
+
+/* PAGE DE DECONNECTION */
+
+.pageDeconnect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.titleDeconnect {
+  margin: 1rem 3rem 2rem 3rem;
 }
