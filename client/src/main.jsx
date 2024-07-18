@@ -22,7 +22,7 @@ const router = createBrowserRouter([
         element: <ConnexionPage />,
       },
       {
-        path: "/landingpage",
+        path: "/",
         element: <LandingPage />,
       },
       {
