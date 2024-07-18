@@ -14,8 +14,10 @@ const {
   update,
   destroy,
 } = require("../../../controllers/userActions");
+const hashPassword = require("../../../services/hashpassword");
+const validateUser = require("../../../services/validation/userValidation");
 
-router.post("/", create);
+router.post("/", validateUser, hashPassword, create);
 
 router.get("/", readAll);
 
