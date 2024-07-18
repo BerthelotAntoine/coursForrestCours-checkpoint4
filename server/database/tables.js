@@ -15,8 +15,8 @@ const tables = {};
 tables.user = new UserRepository();
 tables.role = new RoleRepository();
 tables.course = new CourseRepository();
-tables.course = new CityRepository();
-tables.course = new CategoryRepository();
+tables.city = new CityRepository();
+tables.category = new CategoryRepository();
 /* ************************************************************************* */
 
 // Use a Proxy to customize error messages when trying to access a non-existing table

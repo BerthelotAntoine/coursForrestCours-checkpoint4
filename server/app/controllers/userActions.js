@@ -6,7 +6,7 @@ const create = async (req, res, next) => {
   try {
     const insertId = await tables.user.create(user);
 
-    res.status(201).json({ insertId });
+    res.status(201).json({ insertId, message: "Bienvenue sur le site !" });
   } catch (err) {
     next(err);
   }

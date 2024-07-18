@@ -26,6 +26,9 @@ const categoryRouter = require("./category/router");
 
 router.use("/category", categoryRouter);
 
+const authRouter = require("./auth/router");
+
+router.use("/auth", authRouter);
 /* ************************************************************************* */
 
 module.exports = router;
