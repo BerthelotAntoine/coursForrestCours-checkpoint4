@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useOutletContext } from "react-router-dom";
+import { useOutletContext, Link } from "react-router-dom";
 
 export default function LogoutPage() {
   const { setCurrentUser } = useOutletContext();
@@ -17,8 +17,17 @@ export default function LogoutPage() {
   };
 
   return (
-    <button type="button" onClick={handleLogout}>
-      Se déconnecter{" "}
-    </button>
+    <div className="pageDeconnect">
+      <h3 className="titleDeconnect">
+        Êtes-vous sûr de vouloir vous déconnecter ?
+      </h3>
+      <div className="button_connexion">
+        <Link to="/">
+          <button type="button" onClick={handleLogout} className="conect">
+            Se déconnecter{" "}
+          </button>
+        </Link>
+      </div>
+    </div>
   );
 }

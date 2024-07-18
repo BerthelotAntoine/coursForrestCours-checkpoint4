@@ -1,22 +1,24 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import axios from "axios";
-import { Link, useOutletContext } from "react-router-dom";
+import { Link, useOutletContext, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 
 function ConnexionPage() {
   const { setCurrentUser } = useOutletContext();
   const { register, handleSubmit } = useForm();
+  const navigate = useNavigate();
 
   const onSubmit = async (data) => {
     try {
-      const response = await axios.post(
-        "http://localhost:3310/api/auth/login",
-        data,
-        {
+      await axios
+        .post("http://localhost:3310/api/auth/login", data, {
           withCredentials: true,
-        }
-      );
-      setCurrentUser(response.data.user);
+        })
+
+        .then((response) => {
+          setCurrentUser(response.data.user);
+        })
+        .finally(() => navigate("/"));
     } catch (e) {
       console.error(e.response.data);
     }
@@ -25,10 +27,10 @@ function ConnexionPage() {
   return (
     <div className="register">
       <div className="buttonregister">
-        <Link to="/register">
-          <button type="button">Créer un compte</button>
+        <Link to="/register" className="seConnecter">
+          Créer un compte
         </Link>
-        <button type="button">Se connecter</button>
+        <p className="creationCompte">Se connecter</p>
       </div>
       <div>
         <form className="form" onSubmit={handleSubmit(onSubmit)}>
@@ -38,6 +40,7 @@ function ConnexionPage() {
               id="email"
               name="email"
               placeholder="Email"
+              className="inputForm"
               {...register("email", {
                 required: "Votre email est obligatoire!",
                 pattern: {
@@ -51,6 +54,7 @@ function ConnexionPage() {
               id="password"
               name="password"
               placeholder="Mot de passe"
+              className="inputForm"
               {...register("password", {
                 required: "le mot de passe est requis!",
                 pattern: {
@@ -61,9 +65,11 @@ function ConnexionPage() {
               })}
             />
           </div>
-          <button type="submit" className="button_connexion">
-            Connexion
-          </button>
+          <div className="button_connexion">
+            <button type="submit" className="conect">
+              Connexion
+            </button>
+          </div>
         </form>
       </div>
     </div>

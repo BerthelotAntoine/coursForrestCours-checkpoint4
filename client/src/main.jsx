@@ -8,6 +8,8 @@ import RegisterPage from "./pages/RegisterPage";
 import ConnexionPage from "./pages/ConnexionPage";
 import LandingPage from "./pages/LandingPage";
 import LogoutPage from "./pages/LogoutPage";
+import Kilometer10Page from "./pages/Kilometer10Page";
+import MapPage from "./pages/MapPage";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +30,14 @@ const router = createBrowserRouter([
       {
         path: "/logout",
         element: <LogoutPage />,
+      },
+      {
+        path: "/kilometer10",
+        element: <Kilometer10Page />,
+      },
+      {
+        path: "/map",
+        element: <MapPage />,
       },
     ],
   },
