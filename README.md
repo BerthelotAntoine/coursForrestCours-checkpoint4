@@ -1,5 +1,29 @@
 # coursForrestcours
 
+Création d'un site qui répertorie les triathlons et courses à pieds en France, j'ai eu 2 jours pour réaliser une petite partie du projet.
+
+### Outils utilisés
+
+- react
+- express
+- CSS natif
+- node JS
+- cookie parser
+- axios
+- react router dom
+- react hook form
+- react-responsive-carousel
+  
+### Modélisation
+
+![Capture d'écran 2024-07-19 000044](https://github.com/user-attachments/assets/675eda45-8d25-4093-b974-5b5c410eab14)
+
+### Maquette
+
+
+![Capture d'écran 2024-07-19 093719](https://github.com/user-attachments/assets/dc2fc3ae-06fe-4f5f-9e28-f5c7d2a30d20)
+
+
 This project uses Harmonia. Harmonia is a framework meant to serve as a foundation for every project following the React-Express-MySQL stack, as learned in Wild Code School.
 It's pre-configured with a set of tools which'll help students produce industry-quality and easier-to-maintain code, while staying a pedagogical tool.
 
