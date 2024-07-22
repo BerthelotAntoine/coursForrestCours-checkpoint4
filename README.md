@@ -2,6 +2,9 @@
 
 Création d'un site qui répertorie les triathlons et courses à pieds en France, j'ai eu 2 jours pour réaliser une petite partie du projet.
 
+- Une connexion sécurisée est mis en place avec une base de donnée.
+- Une map avec la localisation d'un point GPS est mis en place.
+
 ### Outils utilisés
 
 - react
